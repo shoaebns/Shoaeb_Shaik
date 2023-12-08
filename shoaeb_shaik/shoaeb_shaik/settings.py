@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "todo_site.wsgi.application"
+WSGI_APPLICATION = "shoaeb_shaik.wsgi.application"
 
 
 # Database
