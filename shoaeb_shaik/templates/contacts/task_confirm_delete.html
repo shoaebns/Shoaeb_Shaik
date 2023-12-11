@@ -4,10 +4,10 @@
 <style>
   h1 {
     text-align: center;
-    color: #1DA1F2; 
+    color: #fa7202; 
     font-size: 45px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-weight: 700;
 }
 .container{
   margin-left: 40px;
@@ -15,9 +15,9 @@
 p{
   font-family: 'Arial';
 }
-  .submit{
+  .delete{
     padding: 10px 12px;
-    background-color: red;
+    background-color: #f59140;
     color: white;
     border: none;
     border-radius: 7px;
@@ -33,14 +33,7 @@ p{
     font-size: 13.33px;
       font-family: Arial;
   }
-  .footer {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .signature{
-    color: green;
-    font-size: larger;
-  }
+  
   hr{
     margin: 20px 40px;
     
@@ -51,7 +44,7 @@ p{
   <p>Are you sure you want to delete task "{{ task.name }}"?</p>
   <form method="post" class="mt-4">
     {% csrf_token %}
-    <button type="submit" class="submit">Delete</button>
+    <button type="submit" class="delete">Delete</button>
     <a class="cancel" href="{% url 'task_list' %}">Cancel</a>
   </form>
 </div>

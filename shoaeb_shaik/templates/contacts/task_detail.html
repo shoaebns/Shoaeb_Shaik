@@ -4,37 +4,15 @@
 <style>
     h1 {
         text-align: center;
-        color: #1DA1F2; 
+        color: #fa7202; 
         font-size: 45px;
         font-family: Arial, Helvetica, sans-serif;
-        font-weight: 500;
+        font-weight: 700;
     }
     .container{
         margin-left: 40px;
       }
-    .submit{
-        margin-top: 2px;
-        padding: 10px 12px;
-        background-color: red;
-        color: white;
-        border: none;
-        border-radius: 7px;
-        text-decoration: none;
-        font-size: 13.33px;
-          font-family: Arial;
-      }
-      .edit{
-        margin-top: 2px;
-        padding: 10px 12px;
-        background-color: #FFDB58;
-        color: black;
-        border: none;
-        border-radius: 7px;
-        text-decoration: none;
-        font-size: 13.33px;
-          font-family: Arial;
-      }
-      .cancel{
+    .delete{
         margin-top: 2px;
         padding: 10px 12px;
         background-color: #1DA1F2;
@@ -45,14 +23,29 @@
         font-size: 13.33px;
           font-family: Arial;
       }
-      .footer {
-        text-align: center;
-        margin-top: 20px;
+      .edit{
+        margin-top: 2px;
+        padding: 10px 12px;
+        background-color: #f59140;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        text-decoration: none;
+        font-size: 13.33px;
+          font-family: Arial;
       }
-      .signature{
-        color: green;
-        font-size: larger;
+      .home{
+        margin-top: 2px;
+        padding: 10px 12px;
+        background-color: #000;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        text-decoration: none;
+        font-size: 13.33px;
+          font-family: Arial;
       }
+      
       hr{
         margin: 20px 40px;
         
@@ -68,9 +61,9 @@
     <p><strong>Created Time:</strong> {{ task.created_time }}</p>
 
    
-     <a class="btn btn-secondary cancel" href="{% url 'task_list' %}">Home</a>
+     <a class="btn btn-secondary home" href="{% url 'task_list' %}">Home</a>
      <a class="btn btn-primary edit" href="{% url 'task_update' task.pk %}">Edit</a>
-    <a class="btn btn-danger submit" href="{% url 'task_confirm_list' task.pk %}">Delete</a>
+    <a class="btn btn-danger delete" href="{% url 'task_confirm_list' task.pk %}">Delete</a>
     
 </div>
 <hr>
